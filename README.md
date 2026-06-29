@@ -1,215 +1,286 @@
-<<<<<<< HEAD
-# Multi-user Todo List App
+# Multi-User Todo List Application
 
-A full-stack web application that allows multiple users to register, log in, and manage their personal task lists. Built with the MERN stack (MongoDB, Express.js, React, Node.js) and modern web technologies.
+A full-stack task management application that enables multiple users to securely register, log in, and organize their personal to-do lists. The project is developed using the MERN stack (MongoDB, Express.js, React, and Node.js) along with modern frontend technologies.
+
+---
 
 ## 🚀 Features
 
-### Core Features
-- 🔐 **User Authentication**: JWT-based registration and login
-- 👥 **Multi-user Support**: Each user has their own secure task list
-- 📝 **CRUD Operations**: Create, read, update, and delete tasks
-- ✅ **Task Management**: Mark tasks as complete/incomplete
-- 🔍 **Search & Filter**: Filter tasks by status, priority, and search text
-- 📅 **Due Date Tracking**: Set and track task due dates
-- 🎯 **Priority Levels**: Low, medium, and high priority tasks
-- 📱 **Responsive Design**: Works on desktop, tablet, and mobile
+### User Features
+
+* 🔐 Secure user registration and login using JWT authentication.
+* 👤 Individual task management for every registered user.
+* 📝 Create, edit, update, and delete tasks.
+* ✅ Mark tasks as completed or pending.
+* 🔎 Search tasks and filter them by status or priority.
+* 📅 Assign due dates to tasks for better planning.
+* 🎯 Organize tasks using Low, Medium, and High priority levels.
+* 📱 Responsive interface compatible with desktops, tablets, and mobile devices.
 
 ### Technical Features
-- 🛡️ **Input Validation**: Client and server-side validation
-- 🔒 **Protected Routes**: Secure access to user-specific data
-- 🎨 **Modern UI**: Beautiful interface with Tailwind CSS
-- 🔄 **State Management**: React Context API for global state
-- 📦 **TypeScript**: Full type safety throughout the application
-- 🔔 **Real-time Feedback**: Toast notifications for user actions
-- 🚀 **Fast Development**: Vite for rapid development experience
 
-## 🛠️ Tech Stack
+* 🛡️ Client-side and server-side input validation.
+* 🔒 Protected routes with authenticated access.
+* 🎨 Clean and responsive UI built with Tailwind CSS.
+* 🔄 Global state management using React Context API.
+* 📦 Developed with TypeScript for improved type safety.
+* 🔔 Interactive toast notifications for user actions.
+* ⚡ Fast development workflow powered by Vite.
+
+---
+
+## 🛠️ Technology Stack
 
 ### Backend
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MongoDB with Mongoose
-- **Authentication**: JWT (JSON Web Tokens)
-- **Password Hashing**: bcryptjs
-- **Validation**: express-validator
-- **CORS**: Cross-origin resource sharing
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT Authentication
+* bcryptjs
+* express-validator
+* CORS
 
 ### Frontend
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Routing**: React Router DOM
-- **Forms**: React Hook Form + Zod
-- **HTTP Client**: Axios
-- **State Management**: React Context API
-- **Notifications**: React Hot Toast
-- **Icons**: Lucide React
 
-## 📁 Project Structure
+* React 18
+* TypeScript
+* Vite
+* Tailwind CSS
+* React Router DOM
+* React Hook Form
+* Zod
+* Axios
+* React Context API
+* React Hot Toast
+* Lucide React Icons
 
-```
+---
+
+## 📂 Project Structure
+
+```text
 todo-app/
-├── backend/                 # Express.js API server
-│   ├── config/             # Database configuration
-│   ├── models/             # Mongoose schemas
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── server.js           # Main server file
-│   ├── package.json        # Backend dependencies
-│   └── env.example         # Environment variables template
-├── frontend/               # React application
+│
+├── backend/
+│   ├── config/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   ├── package.json
+│   └── env.example
+│
+├── frontend/
 │   ├── src/
-│   │   ├── components/     # Reusable UI components
-│   │   ├── pages/          # Page components
-│   │   ├── context/        # React Context providers
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── utils/          # Utility functions
-│   │   ├── types/          # TypeScript definitions
-│   │   ├── App.tsx         # Main app component
-│   │   ├── main.tsx        # App entry point
-│   │   └── index.css       # Global styles
-│   ├── package.json        # Frontend dependencies
-│   └── README.md           # Frontend documentation
-└── README.md               # This file
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── types/
+│   │   ├── utils/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── index.css
+│   ├── package.json
+│   └── README.md
+│
+└── README.md
 ```
 
-## 🚀 Quick Start
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- MongoDB (local or cloud instance)
-- npm or yarn
+
+Before running the application, install:
+
+* Node.js (v16 or later)
+* MongoDB
+* npm or Yarn
+
+---
 
 ### Backend Setup
 
-1. Navigate to the backend directory:
+1. Move to the backend folder.
+
 ```bash
-cd todo-app/backend
+cd backend
 ```
 
-2. Install dependencies:
+2. Install dependencies.
+
 ```bash
 npm install
 ```
 
-3. Create environment file:
+3. Create a `.env` file using the example provided.
+
 ```bash
 cp env.example .env
 ```
 
-4. Configure environment variables in `.env`:
+4. Configure the environment variables.
+
 ```env
 PORT=5000
 NODE_ENV=development
 MONGODB_URI=mongodb://localhost:27017/todo-app
-JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+JWT_SECRET=your-secret-key
 CORS_ORIGIN=http://localhost:3000
 ```
 
-5. Start the development server:
+5. Start the backend server.
+
 ```bash
 npm run dev
 ```
 
-The backend will start on `http://localhost:5000`
+The backend will run at:
+
+```
+http://localhost:5000
+```
+
+---
 
 ### Frontend Setup
 
-1. Navigate to the frontend directory:
+1. Navigate to the frontend folder.
+
 ```bash
-cd todo-app/frontend
+cd frontend
 ```
 
-2. Install dependencies:
+2. Install the required packages.
+
 ```bash
 npm install
 ```
 
-3. Create environment file:
-```bash
-echo "VITE_API_URL=http://localhost:5000/api" > .env
+3. Create the environment file.
+
+```env
+VITE_API_URL=http://localhost:5000/api
 ```
 
-4. Start the development server:
+4. Start the React application.
+
 ```bash
 npm run dev
 ```
 
-The frontend will start on `http://localhost:3000`
+The frontend will be available at:
 
-## 📚 API Documentation
+```
+http://localhost:3000
+```
 
-### Authentication Endpoints
+---
 
-- `POST /api/auth/register` - Register a new user
-- `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user profile
+## 📖 API Endpoints
 
-### Task Endpoints
+### Authentication
 
-- `GET /api/tasks` - Get all tasks (with filters)
-- `POST /api/tasks` - Create a new task
-- `GET /api/tasks/:id` - Get a specific task
-- `PUT /api/tasks/:id` - Update a task
-- `DELETE /api/tasks/:id` - Delete a task
-- `PATCH /api/tasks/:id/toggle` - Toggle task status
+* Register a new user
+* Login
+* Retrieve the current user's profile
 
-### User Endpoints
+### Tasks
 
-- `GET /api/users/profile` - Get user profile
-- `PUT /api/users/profile` - Update user profile
-- `DELETE /api/users/profile` - Delete user account
+* Fetch all tasks
+* Create a new task
+* Retrieve a task by ID
+* Update a task
+* Delete a task
+* Toggle task completion status
 
-## 🎯 Learning Objectives
+### User
+
+* View user profile
+* Update profile information
+* Delete user account
+
+---
+
+## 🎯 Learning Outcomes
 
 This project demonstrates:
 
-- **Full-stack Development**: Complete MERN stack application
-- **Authentication**: JWT-based user authentication
-- **Database Design**: MongoDB schemas and relationships
-- **API Development**: RESTful API with Express.js
-- **Frontend Architecture**: Modern React patterns and practices
-- **State Management**: Context API for global state
-- **Form Handling**: Client and server-side validation
-- **UI/UX Design**: Responsive design with Tailwind CSS
-- **Error Handling**: Comprehensive error handling
-- **Security**: Password hashing, input validation, CORS
+* Full-stack web application development using the MERN stack.
+* JWT-based authentication and authorization.
+* RESTful API development with Express.js.
+* MongoDB schema design using Mongoose.
+* Modern React development with Context API.
+* Form validation using React Hook Form and Zod.
+* Responsive UI design with Tailwind CSS.
+* Secure password handling and API validation.
+* Error handling and protected routes.
 
-## 🚀 Deployment
+---
 
-### Backend Deployment (Render)
-1. Connect your GitHub repository to Render
-2. Create a new Web Service
-3. Set build command: `npm install`
-4. Set start command: `npm start`
-5. Add environment variables
+## 🌐 Deployment
 
-### Frontend Deployment (Vercel)
-1. Connect your GitHub repository to Vercel
-2. Set build command: `npm run build`
-3. Set output directory: `dist`
-4. Add environment variables
+### Backend (Render)
+
+1. Connect the GitHub repository.
+2. Create a new Web Service.
+3. Install dependencies using:
+
+```bash
+npm install
+```
+
+4. Start the application with:
+
+```bash
+npm start
+```
+
+5. Configure the required environment variables.
+
+---
+
+### Frontend (Vercel)
+
+1. Import the GitHub repository.
+2. Build the project using:
+
+```bash
+npm run build
+```
+
+3. Set the output directory to:
+
+```
+dist
+```
+
+4. Add the frontend environment variables.
+
+---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Implement your changes.
+4. Test the application.
+5. Submit a Pull Request.
+
+---
 
 ## 📄 License
 
 This project is licensed under the ISC License.
 
-## 🙏 Acknowledgments
+---
 
-- React team for the amazing framework
-- Vite team for the fast build tool
-- Tailwind CSS team for the utility-first CSS framework
-- MongoDB team for the flexible database
-- Express.js team for the web framework 
-=======
-# Multi-User_TODO_listAPP
->>>>>>> 719126d277a92baa5cf4543fa0aef718c73fe2db
+## 🙌 Acknowledgements
+
+Special thanks to the communities behind React, Express.js, MongoDB, Node.js, Tailwind CSS, and Vite for providing the tools and frameworks that made this project possible.
